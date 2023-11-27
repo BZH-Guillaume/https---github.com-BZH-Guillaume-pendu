@@ -4,8 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <title>Jeu du Pendu</title>
 </head>
 <body>
+    <div class="container">
+        <h1>Jeu du Pendu</h1>
+        <div id="word-container">
+            <!-- La zone où le mot secret sera affiché -->
+        </div>
+        <div id="hangman-container">
+            <!-- La zone où le pendu sera affiché -->
+        </div>
+        <div id="guesses-container">
+            <!-- La zone où les lettres proposées seront affichées -->
+        </div>
+        <div id="chances-container">
+            <!-- La zone où le nombre de chances restantes sera affiché -->
+        </div>
+        <div id="input-container">
+            <!-- La zone pour entrer une lettre ou proposer un mot -->
+            <input type="text" id="input" placeholder="Entrez une lettre ou un mot">
+            <button onclick="submitGuess()">Proposer</button>
+        </div>
+    </div>
+    <div id="confetti-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/confetti-js"></script>
     <script src="script.js"></script>
 </body>
 </html>
