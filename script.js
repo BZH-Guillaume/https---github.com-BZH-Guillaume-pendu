@@ -8,8 +8,6 @@ const confettiSettings = {
     props: ['circle', 'square', 'triangle', 'line'],
 };
 
-const confetti = new ConfettiGenerator(confettiSettings);
-
 // Mot secret actuel
 let secretWord = "";
 
