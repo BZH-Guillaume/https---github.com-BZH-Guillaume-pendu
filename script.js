@@ -1,12 +1,5 @@
 // Liste de mots possibles (ajoute autant que tu veux)
-const wordList = ["javascript", "developer", "hangman", "challenge", "coding"];
-const confettiSettings = {
-    target: 'confetti-container',
-    max: 200,
-    size: 2,
-    animate: true,
-    props: ['circle', 'square', 'triangle', 'line'],
-};
+const wordList = ["javascript", "developper", "pendu", "challenge", "coding", "tenace"];
 
 // Mot secret actuel
 let secretWord = "";
@@ -33,6 +26,7 @@ function initializeGame() {
     chances = 6;
     updateDisplay();
 }
+
 
 // Fonction pour mettre à jour l'affichage
 function updateDisplay() {
@@ -85,7 +79,22 @@ function handleLetterGuess(letter) {
     checkGameStatus();
 }
 
-// Fonction pour traiter la proposition de mot du joueur
+// Fonction pour ajouter un mot à la liste
+function addWord() {
+    const newWord = prompt("Entrez un nouveau mot :").toLowerCase();
+    
+    // Vérifie si le mot est valide (non vide et ne contient que des lettres)
+    if (newWord && /^[a-z]+$/.test(newWord)) {
+        wordList.push(newWord);
+        alert(`Le mot "${newWord}" a été ajouté avec succès.`);
+        // Réinitialise le jeu après l'ajout d'un mot
+        initializeGame();
+    } else {
+        alert("Veuillez entrer un mot valide.");
+    }
+}
+
+// Nouvelle fonction pour traiter la proposition de mot du joueur
 function handleWordGuess(word) {
     if (word === secretWord) {
         // Le joueur a deviné correctement le mot
@@ -94,6 +103,8 @@ function handleWordGuess(word) {
         // Le joueur a deviné incorrectement
         incorrectGuesses.push(word);
         chances--;
+        // Met à jour l'affichage du pendu après chaque proposition
+        updateHangman();
         checkGameStatus();
     }
 }
