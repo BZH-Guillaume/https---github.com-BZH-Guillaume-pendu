@@ -3,41 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <title>Jeu du Pendu</title>
 </head>
 <body>
-<div class="container">
-    <div class="box-pendu">
-        <h1>Jeu du Pendu</h1>
-        <img src="images/hangman-0.svg" alt="Pendu">
-    </div>
-    <div class="box-jeu">
-        <ul class="affichage-mot">
-            <li class="lettre"></li>
-            <li class="lettre"></li>
-            <li class="lettre"></li>
-            <li class="lettre"></li>
-            <li class="lettre"></li>
-            <li class="lettre"></li>
-            <li class="lettre"></li>
-        </ul>
-        <h4 class="indice">
-            Indice :
-            <b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius tempore mollitia officia natus, accusamus quaerat modi architecto ut, voluptate quidem. Natus dolore quasi voluptatibus recusandae porro, esse labore voluptates?</b>
-        </h4>
-        <h4 class="deviner">
-            Nombre d'erreurs :
-            <b>0 / 6</b>
-        </h4>
-        <div class="clavier">
-            <button>a</button><button>b</button><button>c</button><button>d</button><button>e</button><button>f</button><button>g</button><button>h</button>
-            <button>i</button><button>j</button><button>k</button><button>l</button><button>m</button><button>n</button><button>o</button><button>p</button>
-            <button>q</button><button>r</button><button>s</button><button>t</button><button>u</button><button>v</button><button>w</button><button>x</button>
-            <button>y</button><button>z</button>
+    <div class="game-modal">
+        <div class="contenu">
+            <img src="images/lost.gif" alt="gif">
+            <h4>Perdu !!!</h4>
+            <p>Le mot à trouver était : </p>
+            <button class="rejouer">Recommencer !</button>
         </div>
     </div>
-</div>
+    <div class="container">
+        <div class="box-pendu">
+            <h1>Jeu du Pendu</h1>
+            <img src="images/hangman-0.svg" alt="Pendu">
+        </div>
+        <div class="box-jeu">
+            <ul class="affichage-mot">
+                <li class="lettre devinee"></li>
+                <li class="lettre"></li>
+                <li class="lettre"></li>
+                <li class="lettre"></li>
+                <li class="lettre"></li>
+                <li class="lettre"></li>
+                <li class="lettre"></li>
+            </ul>
+            <h4 class="indice">
+                Indice :
+                <b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius tempore mollitia officia natus, accusamus quaerat modi architecto ut, voluptate quidem. Natus dolore quasi voluptatibus recusandae porro, esse labore voluptates?</b>
+            </h4>
+            <h4 class="nbErreurs">
+                Nombre d'erreurs :
+                <b>0 / 6</b>
+            </h4>
+            <div class="clavier">
+                <button>a</button><button>b</button><button>c</button><button>d</button><button>e</button><button>f</button><button>g</button><button>h</button>
+                <button>i</button><button>j</button><button>k</button><button>l</button><button>m</button><button>n</button><button>o</button><button>p</button>
+                <button>q</button><button>r</button><button>s</button><button>t</button><button>u</button><button>v</button><button>w</button><button>x</button>
+                <button>y</button><button>z</button>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
