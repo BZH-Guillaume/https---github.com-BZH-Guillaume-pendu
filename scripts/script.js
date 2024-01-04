@@ -1,6 +1,6 @@
 
 const affichageMot = document.querySelector('.affichage-mot');
-const motDevine = document.querySelector('.affichage-mot');
+const motDevine = document.querySelector('.nbErreurs b');
 const clavierDiv = document.querySelector('.clavier');
 let motActuel, nbErreur = 0;
 const essaiMax = 6;
@@ -26,6 +26,7 @@ const initGame = (button, lettreCliquee) => {
     } else  {
         nbErreur++;
     }
+    motDevine.innerText = `${nbErreur}/${essaiMax}`;
 }
 
 
@@ -34,7 +35,10 @@ for (let i = 97; i < 122; i++) {
     const button = document.createElement('button');
     button.innerText = String.fromCharCode(i);
     clavierDiv.appendChild(button);
-    button.addEventListener('click', (e) => initGame(e.target, String.fromCharCode(i)));
+    // button.addEventListener('click', (e) => initGame(e.target, String.fromCharCode(i)));
+    (function (currentChar) {
+        button.addEventListener('click', () => initGame(button, currentChar));
+    })(String.fromCharCode(i));
 }
 
 motAuHasard();
