@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="scripts/listeMots.js" defer></script>
     <script src="scripts/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <title>Jeu du Pendu</title>
 </head>
@@ -34,8 +35,8 @@
                 <li class="lettre"></li> -->
             </ul>
             <h4 class="indice">
-                Indice :
-                <b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius tempore mollitia officia natus, accusamus quaerat modi architecto ut, voluptate quidem. Natus dolore quasi voluptatibus recusandae porro, esse labore voluptates?</b>
+                <p id="toogle-indice" onclick="toggleIndice()">Indice :</p>
+                <b id="contenu-indice">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius tempore mollitia officia natus, accusamus quaerat modi architecto ut, voluptate quidem. Natus dolore quasi voluptatibus recusandae porro, esse labore voluptates?</b>
             </h4>
             <h4 class="nbErreurs">
                 Nombre d'erreurs :

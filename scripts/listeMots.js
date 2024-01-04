@@ -68,7 +68,7 @@ const listeMots = [
         indice: "Le moment de la journée ou le soleil passe sous l'horizon."
     },
     {
-        mot: "café",
+        mot: "cafe",
         indice: "Boisson populaire, généralement bue chaude."
     },
     {
@@ -153,7 +153,7 @@ const listeMots = [
     },
     {
         mot: "desert",
-        indice: "très très gros tas de sable"
+        indice: "Très très gros tas de sable"
     },
     {
         mot: "tournesol",

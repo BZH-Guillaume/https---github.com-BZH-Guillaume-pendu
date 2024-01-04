@@ -12,7 +12,7 @@ body {
     justify-content: center;
     min-height: 100vh;
     padding: 0 10px;
-    background: rgba(184, 49, 59, 0.58);
+    background: rgba(58, 49, 184, 0.58);
 }
 
 .container {
@@ -87,7 +87,7 @@ body {
     outline: none;
 
     border: none;
-    background: rgba(184, 49, 59, 0.58);
+    background: rgba(58, 49, 184, 0.44);
     border-radius: 4px;
     text-transform: uppercase;
 }
@@ -172,4 +172,8 @@ body {
     .box-pendu h1 {
         display: none;
     }
+}
+
+#contenu-indice {
+    display: none;
 }

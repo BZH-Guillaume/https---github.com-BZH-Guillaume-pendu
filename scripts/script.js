@@ -22,10 +22,9 @@ const resetGame = () => { //reset du jeu, interface et variables
 const motAuHasard = () => {
     const { mot, indice } = listeMots[Math.floor(Math.random() * listeMots.length)];
     motActuel = mot;
-    console.log(mot);
+    // console.log(mot);
     document.querySelector('.indice b').innerText = indice;
-    resetGame(motAuHasard);
-    
+    resetGame(motAuHasard, toggleIndice);
 }
 
 const gameOver = (isVictory) => {
@@ -34,7 +33,10 @@ const gameOver = (isVictory) => {
         gameModal.querySelector('img').src = `images/${isVictory ? 'victory' : 'lost'}.gif`;
         gameModal.querySelector('h4').innerText = `${isVictory ? 'Félicitations !' : 'Game Over'}`;
         gameModal.querySelector('p').innerHTML = `${modalText} <b>${motActuel}</b>`;
-        gameModal.classList.add('show');   
+        gameModal.classList.add('show');
+        if(isVictory) {
+            confetti();
+        }
     }, 300);
 }
 
@@ -72,3 +74,17 @@ for (let i = 97; i < 123; i++) { // les codes ASCII de 97 à 123 correspondent a
 
 motAuHasard();
 boutonRejouer.addEventListener('click', motAuHasard);
+
+function toggleIndice() {
+    // Sélectionner la balise <b>
+    let indiceContent = document.getElementById('contenu-indice');
+
+    // Afficher ou cacher le contenu de la balise <b>
+    if (indiceContent.style.display === 'none' || indiceContent.style.display === '') {
+        indiceContent.style.display = 'block';
+    } else {
+        indiceContent.style.display = 'none';
+    }
+}
+
+toogle-indice.addEventListener("click", toggleIndice);
