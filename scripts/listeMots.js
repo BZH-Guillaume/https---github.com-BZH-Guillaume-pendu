@@ -1,4 +1,4 @@
-const motList = [
+const listeMots = [
     {
         mot: "guitare",
         indice: "Un instrument de musique à cordes."
@@ -247,4 +247,4 @@ const motList = [
         mot: "stylo",
         indice: "Instrument pour écrire dont le corps contient une réserve d'encre."
     },
-];
+]
